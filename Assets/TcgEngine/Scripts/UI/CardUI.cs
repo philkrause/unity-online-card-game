@@ -89,7 +89,7 @@ namespace TcgEngine.UI
 
 
             if (attack_icon != null)
-                attack_icon.enabled = card.IsCharacter();
+                attack_icon.enabled = card.IsBoardCard();
             if (attack != null)
                 attack.enabled = card.IsCharacter();
             if (hp_icon != null)

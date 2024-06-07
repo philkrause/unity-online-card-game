@@ -146,7 +146,7 @@ namespace TcgEngine.AI
             if (player.cards_hand.Count > 0 && game_data.IsPlayerActionTurn(player))
             {
                 Card random = player.GetRandomCard(player.cards_hand, rand);
-                Slot slot = player.GetRandomEmptySlot(rand);
+                Slot slot = player.GetRandomEmptySlotAI(rand);
 
                 if (random != null && random.CardData.IsRequireTargetSpell())
                     slot = game_data.GetRandomSlot(rand); //Spell can target any slot, not just your side

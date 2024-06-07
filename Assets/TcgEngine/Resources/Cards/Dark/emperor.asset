@@ -17,7 +17,7 @@ MonoBehaviour:
   art_full: {fileID: 21300000, guid: 1e21c3c6d1f15f84386653987b19b6be, type: 3}
   art_board: {fileID: 21300000, guid: 1e21c3c6d1f15f84386653987b19b6be, type: 3}
   art_name: {fileID: 21300000, guid: e301d209648a1714e93c7e2612fb4b03, type: 3}
-  type: 10
+  type: 30
   team: {fileID: 11400000, guid: 6bbb96863ece0314fb318c0fce569afc, type: 2}
   rarity: {fileID: 11400000, guid: 15eaa2a0fbd97f149b3aa87387c160d1, type: 2}
   mana: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
   abilities: []
   text: 'OnReveal: Drain 1 Force from every enemy at this Location '
   desc: 
-  spawn_fx: {fileID: 9125387663047351618, guid: bac685160af4aff46ae561a51da6f5f4,
+  spawn_fx: {fileID: 8207343968682951967, guid: 0a2325e55f302f84aa511ce672526fad,
     type: 3}
   death_fx: {fileID: 0}
   attack_fx: {fileID: 0}

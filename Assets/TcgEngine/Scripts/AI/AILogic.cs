@@ -337,7 +337,7 @@ namespace TcgEngine.AI
                 if (card.CardData.IsBoardCard())
                 {
                     //Doesn't matter where the card is played
-                    Slot slot = player.GetRandomEmptySlot(random_gen, slot_array.Get());
+                    Slot slot = player.GetRandomEmptySlotAI(random_gen, slot_array.Get());
 
                     if (data.CanPlayCard(card, slot))
                     {

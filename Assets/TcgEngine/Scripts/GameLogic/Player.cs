@@ -201,6 +201,14 @@ namespace TcgEngine
             return Slot.None;
         }
 
+        public virtual Slot GetRandomEmptySlotAI(System.Random rand, List<Slot> list_mem = null)
+        {
+            List<Slot> valid = GetEmptySlotsAI(list_mem);
+            if (valid.Count > 0)
+                return valid[rand.Next(0, valid.Count)];
+            return Slot.None;
+        }
+
         public virtual Slot GetRandomOccupiedSlot(System.Random rand, List<Slot> list_mem = null)
         {
             List<Slot> valid = GetOccupiedSlots(list_mem);
@@ -211,7 +219,19 @@ namespace TcgEngine
 
         public List<Slot> GetEmptySlots(List<Slot> list_mem = null)
         {
-            List<Slot> valid = list_mem != null ? list_mem : new List<Slot>();
+            List<Slot> valid = list_mem;
+            foreach (Slot slot in Slot.GetAll(player_id))
+            {
+                Card slot_card = GetSlotCard(slot);
+                if (slot_card == null)
+                    valid.Add(slot);
+            }
+            return valid;
+        }
+
+        public List<Slot> GetEmptySlotsAI(List<Slot> list_mem = null)
+        {
+            List<Slot> valid = list_mem;
             foreach (Slot slot in Slot.GetAll(player_id))
             {
                 Card slot_card = GetSlotCard(slot);
